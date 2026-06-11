@@ -7,7 +7,7 @@ class Node
     public:
     string info;
     Node* leftchild;
-    Node* rigtchild;
+    Node* rightchild;
 
     // Constructor for the node class
     Node(string i, Node *l, Node *r)
@@ -107,3 +107,22 @@ public:
             preorder(ptr->rightchild);
         }
     }
+
+    void postorder(Node *ptr)
+    {
+        // perfoms the postorder traveersal of the tree
+
+        if (ROOT == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+
+        if (ptr != NULL)
+        {
+            postorder(ptr->leftchild);
+            postorder(ptr->rightchild);
+            cout << ptr->info << " ";
+        }
+    }
+};
