@@ -17,3 +17,10 @@ class Node
         rightchild = r;
     }
 };
+
+class BinaryTree
+{
+public: 
+    Node *ROOT;
+
+    
